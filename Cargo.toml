@@ -1,0 +1,28 @@
+[package]
+name = "square-rulerpack"
+version = "0.2.0"
+edition = "2021"
+license = "MIT"
+description = "Lars Rocha's second factoring engine: self-initialising quadratic sieve with double large primes, cache-sized blocks and square lanes, in pure Rust."
+repository = "https://github.com/oppressionslayer/square-rulerpack-rs"
+authors = ["Lars Rocha"]
+readme = "README.md"
+keywords = ["factorization", "siqs", "number-theory"]
+categories = ["mathematics"]
+include = ["/src/**", "/examples/**", "/Cargo.toml", "/README.md", "/LICENSE"]
+
+[dependencies]
+num-bigint = "0.4"
+num-traits = "0.2"
+num-integer = "0.1"
+rayon = "1"
+rulerpack = { version = "0.3.1", path = "../rulerpack-rs", features = ["big"] }
+
+[features]
+default = []
+simd = []
+profile = []
+
+[[bin]]
+name = "square-rulerpack"
+path = "src/bin/square-rulerpack.rs"
