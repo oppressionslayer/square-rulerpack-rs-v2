@@ -9,7 +9,10 @@ GenuineIntel
 
 
 ```sh
+curl -L -o sq.crate https://crates.io/api/v1/crates/square-rulerpack/0.2.0/download
+tar xzf sq.crate && cd square-rulerpack-0.2.0
 SIQS_Q2=1 SIQS_SMALL=512 RAYON_NUM_THREADS=8 cargo run --release --example factor -- 4886189752164427378644372029277135326505927538331605193174055598646955377478099751972989945355617869
+
 
      Running `target/release/examples/factor 4886189752164427378644372029277135326505927538331605193174055598646955377478099751972989945355617869`
   siqs: input 100 digits / 332 bits; kN 102 digits / 337 bits; multiplier 29
